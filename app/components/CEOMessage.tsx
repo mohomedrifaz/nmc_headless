@@ -31,7 +31,7 @@ const CeoMessageSection = () => {
                             <div className="mb-4">
                                 <Quote className="mb-2 w-8 h-8 text-purple-500" />
                                 <p className="text-lg font-medium leading-relaxed text-gray-700">
-                                    "At EduGateway, we believe every student deserves a chance to shine. Our mission is to empower dreams through education, innovation, and unwavering support. Your success is our purpose."
+                                    At EduGateway, we believe every student deserves a chance to shine. Our mission is to empower dreams through education, innovation, and unwavering support. Your success is our purpose.
                                 </p>
                             </div>
                             <div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const EducationEventsDetails = () => {
     const childServices = [
         {
@@ -24,7 +26,7 @@ const EducationEventsDetails = () => {
                 <div className="grid gap-8 md:grid-cols-3">
                     {childServices.map((service, index) => (
                         <div key={index} className="overflow-hidden bg-white rounded-2xl shadow-lg transition-all hover:shadow-xl">
-                            <img src={service.image} alt={service.title} className="object-cover w-full h-48" />
+                            <Image src={service.image} alt={service.title} className="object-cover w-full h-48" />
                             <div className="p-6">
                                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{service.title}</h3>
                                 <p className="text-gray-600">{service.description}</p>
