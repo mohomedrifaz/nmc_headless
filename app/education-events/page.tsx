@@ -13,7 +13,7 @@ export default async function EducationEventsPage() {
       <EducationEventsHero />
       <EducationEventsInfo />
       <EducationEventsDetails />
-      <WhyAttendSection/>
+      <WhyAttendSection />
       <CTASection />
     </>
   );
