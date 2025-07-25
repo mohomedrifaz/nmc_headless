@@ -4,6 +4,8 @@ import ServicesCarousel from "@/app/components/ServicesCarousal";
 import TestimonialsSection from "@/app/components/TestimonialsSection";
 import CeoMessageSection from "./components/CEOMessage";
 import CTASection from "./components/CTASection";
+import SecondaryHero from "./components/SecondaryHero";
+import PartnersSlider from "./components/PartnersSlider";
 
 export default function Home() {
   return (
@@ -11,7 +13,9 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ServicesCarousel />
+      <SecondaryHero />
       <CeoMessageSection />
+      <PartnersSlider/>
       <TestimonialsSection />
       <CTASection />
     </div>

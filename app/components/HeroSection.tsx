@@ -5,11 +5,12 @@ import Image from "next/image";
 
 const HeroSection = () => {
     return (
+
         <section
             id="home"
-            className="overflow-hidden relative min-h-screen bg-gradient-to-br from-indigo-400 via-purple-200 to-white"
+            className="flex overflow-hidden relative items-center h-screen bg-gradient-to-br from-indigo-400 via-purple-200 to-white"
         >
-            <div className="container px-4 pt-24 pb-16 mx-auto lg:px-8">
+            <div className="container px-4 mx-auto lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-8 items-center min-h-[80vh]">
                     {/* Left Section */}
                     <div className="space-y-4">
@@ -59,13 +60,13 @@ const HeroSection = () => {
                     <div className="relative h-[550px] flex items-center justify-center">
                         <div className="relative w-full h-full">
                             {[
-                                { title: "Study Abroad", className: "top-0 left-16", wide: false },
+                                { title: "Study Abroad", className: "top-12 left-16", wide: false },
                                 { title: "Skill Training", className: "top-24 right-0", wide: false },
                                 { title: "Edu Events", className: "bottom-0 left-0", wide: true },
                             ].map((item, index) => (
                                 <div
                                     key={index}
-                                    className={`absolute ${item.className} ${item.wide ? "w-80 h-50" : "w-60 h-80"
+                                    className={`absolute ${item.className} ${item.wide ? "w-80 h-50" : "w-60 h-70"
                                         } rounded-2xl overflow-hidden shadow-md group hover:scale-[1.05] transition-transform duration-300`}
                                 >
                                     <Image

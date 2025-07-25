@@ -21,11 +21,12 @@ const CeoMessageSection = () => {
                 <Card className="p-8 mx-auto max-w-4xl bg-white rounded-2xl border border-gray-200 shadow-lg lg:p-12">
                     <div className="flex flex-col gap-8 items-center lg:flex-row">
                         <Image
-                            src="https://images.unsplash.com/photo-1603415526960-f8f0a1f0b4d6?w=200&h=200&fit=crop&crop=face"
+                            src="/suresh.png"
                             alt="CEO Portrait"
                             width={120}
                             height={120}
-                            className="object-cover rounded-full shadow-md"
+                            className="object-cover rounded-full border-4 border-white shadow-lg"
+                            style={{ aspectRatio: '1 / 1' }}
                         />
                         <div className="flex-1">
                             <div className="mb-4">
