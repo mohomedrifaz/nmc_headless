@@ -28,16 +28,16 @@ const ServicesGrid = () => {
   ];
 
   return (
-    <section className="px-12 py-20 bg-gradient-to-br from-indigo-400 via-purple-200 to-white">
+    <section className="px-12 py-20 bg-gradient-to-br from-indigo-400 via-purple-300 to-white">
       <div className="container px-4 mx-auto lg:px-8">
         <div className="mb-8 text-center">
           <h2 className="text-4xl font-bold text-gray-800 drop-shadow-sm lg:text-5xl">
             Our{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-indigo-700">
+            <span className="text-yellow-300">
               Services
             </span>
           </h2>
-          <p className="py-4 mx-auto max-w-3xl text-lg text-gray-600">
+          <p className="py-4 mx-auto max-w-3xl text-lg font-semibold text-gray-700">
             Our vision, values, and commitment to student success—directly from the heart of our leadership.
           </p>
         </div>

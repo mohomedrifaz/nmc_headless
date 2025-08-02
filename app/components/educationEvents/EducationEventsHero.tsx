@@ -1,7 +1,8 @@
 "use client";
 
 const EducationEventsHero = () => (
-  <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+  <section className="relative min-h-[90vh] pt-20 flex items-center justify-center overflow-hidden">
+    {/* Background Video */}
     <video
       autoPlay
       muted
@@ -12,19 +13,21 @@ const EducationEventsHero = () => (
       <source src="/test.mp4" type="video/mp4" />
     </video>
 
+    {/* Gradient Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-b from-purple-900/40 to-purple-900/70 z-[1]" />
+
+    {/* Content */}
     <div className="relative z-10 px-6 py-10 max-w-4xl text-center">
-      <h1 className="mt-10 mb-4 text-5xl font-black text-white drop-shadow-lg">
-        Empowering Minds Through Events
+      <h1 className="mt-10 mb-6 text-4xl font-extrabold leading-tight text-white drop-shadow-xl lg:text-6xl">
+        Empowering Minds<br className="hidden lg:block" /> Through Events
       </h1>
-      <p className="mb-6 text-xl font-medium text-white/90">
-        Discover transformative educational events that inspire, connect, and elevate learning experiences.
+      <p className="mx-auto mb-8 max-w-3xl text-2xl font-medium leading-relaxed text-white/90">
+        Discover transformative educational experiences that inspire, connect, and elevate learning across the globe.
       </p>
-      <div className="inline-block px-6 py-3 font-semibold text-white bg-purple-600 rounded-full shadow-md transition text-md hover:bg-purple-700">
+      <div className="inline-block px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full shadow-lg transition cursor-pointer hover:scale-105 hover:shadow-xl">
         Explore Events
       </div>
     </div>
-
-    <div className="absolute inset-0 bg-gradient-to-b from-purple-900/40 to-purple-900/70 z-[1]" />
   </section>
 );
 

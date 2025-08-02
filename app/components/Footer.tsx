@@ -4,12 +4,12 @@ import {
     Instagram,
     Linkedin,
     Youtube,
-    GraduationCap,
     Phone,
     Mail,
     MapPin,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const Footer = () => {
     const quickLinks = [
@@ -17,15 +17,12 @@ const Footer = () => {
         { name: "Services", href: "#services" },
         { name: "Testimonials", href: "#testimonials" },
         { name: "Contact", href: "#contact" },
-        { name: "Blog", href: "#blog" },
     ];
 
     const services = [
-        { name: "University Admissions", href: "#" },
+        { name: "Skill Training", href: "#" },
         { name: "Study Abroad", href: "#" },
-        { name: "Test Preparation", href: "#" },
-        { name: "Career Counseling", href: "#" },
-        { name: "Scholarship Guidance", href: "#" },
+        { name: "Edu Events", href: "#" },
     ];
 
     const socialLinks = [
@@ -44,10 +41,9 @@ const Footer = () => {
                     {/* Company Info */}
                     <div className="space-y-6">
                         <div className="flex items-center space-x-2">
-                            <div className="p-2 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl">
-                                <GraduationCap className="w-6 h-6 text-white" />
+                            <div className="">
+                                <Image src="/mc-new-logo-1.png" alt="NMC" width={100} height={100} />    
                             </div>
-                            <span className="text-xl font-bold">EduGateway</span>
                         </div>
                         <p className="leading-relaxed text-gray-400">
                             Your trusted partner in educational excellence. We are committed to helping students achieve their academic dreams and career aspirations.
@@ -59,7 +55,7 @@ const Footer = () => {
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Mail className="w-5 h-5 text-purple-400" />
-                                <span>info@edugateway.com</span>
+                                <span>info@NMC.com</span>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <MapPin className="w-5 h-5 text-purple-400" />

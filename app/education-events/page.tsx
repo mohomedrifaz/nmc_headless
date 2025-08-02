@@ -5,7 +5,8 @@ import EducationEventsInfo from "@/app/components/educationEvents/EducationEvent
 import EducationEventsDetails from "@/app/components/educationEvents/EducationEventsDetails";
 import CTASection from "@/app/components/educationEvents/CTASection";
 import WhyAttendSection from "../components/educationEvents/WhyAttendSection";
-
+import PastEventsGallery from "../components/educationEvents/PastEventsGallery";
+import GetInvolvedSection from "../components/educationEvents/GetInvolvedSection";
 
 export default async function EducationEventsPage() {
   return (
@@ -14,6 +15,8 @@ export default async function EducationEventsPage() {
       <EducationEventsInfo />
       <EducationEventsDetails />
       <WhyAttendSection />
+      <PastEventsGallery />
+      <GetInvolvedSection />
       <CTASection />
     </>
   );

@@ -60,7 +60,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-b from-purple-50 to-white">
+    <section id="testimonials" className="py-20 bg-gradient-to-b from-purple-50 to-white bg-[url('/double-bubble-outline.png')] bg-repeat">
       <div className="container px-4 mx-auto lg:px-8">
         {/* Section Header */}
         <div className="mb-16 text-center">
@@ -77,9 +77,11 @@ const TestimonialsSection = () => {
           <div className="grid gap-8 lg:grid-cols-3">
             {/* Current Testimonial (Large) */}
             <div className="lg:col-span-2">
-              <Card className="overflow-hidden relative p-8 bg-white rounded-2xl border border-gray-200 shadow-lg lg:p-12">
+              <Card
+                className="group overflow-hidden relative p-8 bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl border border-purple-300 shadow-xl lg:p-12 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] cursor-pointer"
+              >
                 <div className="absolute top-6 left-6 opacity-10">
-                  <Quote className="w-16 h-16 text-purple-500" />
+                  <Quote className="w-16 h-16 text-white" />
                 </div>
 
                 <div className="relative z-10">
@@ -89,7 +91,7 @@ const TestimonialsSection = () => {
                     ))}
                   </div>
 
-                  <blockquote className="mb-8 text-xl font-medium leading-relaxed text-gray-900 lg:text-2xl">
+                  <blockquote className="mb-8 text-xl font-medium leading-relaxed text-gray-900 transition-colors duration-300 lg:text-2xl">
                     {testimonials[currentTestimonial].content}
                   </blockquote>
 
@@ -102,19 +104,20 @@ const TestimonialsSection = () => {
                       className="object-cover w-16 h-16 rounded-full shadow-md"
                     />
                     <div>
-                      <div className="text-lg font-semibold text-gray-900">
+                      <div className="text-lg font-semibold text-gray-900 transition-colors duration-300">
                         {testimonials[currentTestimonial].name}
                       </div>
-                      <div className="font-medium text-purple-600">
+                      <div className="font-medium text-purple-600 transition-colors duration-300">
                         {testimonials[currentTestimonial].role}
                       </div>
-                      <div className="text-sm text-gray-600">
+                      <div className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-black">
                         {testimonials[currentTestimonial].country}
                       </div>
                     </div>
                   </div>
                 </div>
               </Card>
+
             </div>
 
             {/* Side Testimonials Preview */}
@@ -122,7 +125,7 @@ const TestimonialsSection = () => {
               {testimonials.slice(1, 3).map((testimonial, index) => (
                 <Card
                   key={index}
-                  className="p-6 bg-purple-50 rounded-xl border border-purple-100 transition-all duration-300 cursor-pointer hover:shadow-md"
+                  className="p-6 bg-gradient-to-br from-purple-200 to-indigo-100 rounded-xl border border-purple-300 transition-all duration-300 cursor-pointer hover:shadow-lg hover:scale-[1.02]"
                   onClick={() => setCurrentTestimonial((currentTestimonial + index + 1) % testimonials.length)}
                 >
                   <div className="flex items-center mb-3 space-x-3">
@@ -135,13 +138,12 @@ const TestimonialsSection = () => {
                     />
                     <div>
                       <div className="text-sm font-medium text-gray-900">{testimonial.name}</div>
-                      <div className="text-xs text-purple-600">{testimonial.role}</div>
+                      <div className="text-xs text-purple-700">{testimonial.role}</div>
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600 line-clamp-3">
-                    {testimonial.content}
-                  </p>
+                  <p className="text-sm text-gray-700 line-clamp-3">{testimonial.content}</p>
                 </Card>
+
               ))}
             </div>
           </div>

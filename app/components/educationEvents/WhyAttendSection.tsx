@@ -26,7 +26,7 @@ const reasons = [
 ];
 
 const WhyAttendSection = () => (
-  <section className="py-24 bg-gradient-to-r from-purple-50 to-white">
+  <section className="py-24 bg-gradient-to-r from-purple-50 to-white bg-[url('/double-bubble-outline.png')] bg-repeat">
     <div className="container px-4 mx-auto text-center lg:px-8">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
@@ -44,7 +44,7 @@ const WhyAttendSection = () => (
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.15 }}
-            className="p-8 bg-white rounded-xl shadow-xl hover:shadow-purple-300 transition transform hover:scale-[1.03] border border-purple-100"
+            className="p-8 bg-white rounded-xl cursor-pointer shadow-xl hover:shadow-purple-300 transition transform hover:scale-[1.03] border border-purple-100"
           >
             <div className="flex flex-col items-center text-center">
               {reason.icon}
