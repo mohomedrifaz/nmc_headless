@@ -56,11 +56,11 @@ const HeroSection = () => {
                             {[
                                 { title: "Study Abroad", className: "top-4 left-24", wide: false, image: heroStudents },
                                 { title: "Skill Training", className: "top-20 right-8", wide: false, image: heroStudents2 },
-                                { title: "Edu Events", className: "bottom-12 left-8", wide: true, image: heroStudents3 },
+                                { title: "Edu Events", className: "bottom-12 left-0", wide: true, image: heroStudents3 },
                             ].map((item, index) => (
                                 <div
                                     key={index}
-                                    className={`absolute ${item.className} ${item.wide ? "w-72 h-44" : "w-52 h-60"}
+                                    className={`absolute ${item.className} ${item.wide ? "w-80 h-44" : "w-52 h-60"}
     rounded-2xl overflow-hidden shadow-xl group hover:scale-[1.05] transition-transform duration-300
     border border-white/20 backdrop-blur-sm cursor-pointer`}
                                 >
