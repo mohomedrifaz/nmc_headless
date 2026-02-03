@@ -14,7 +14,7 @@ const StudyAbroadCTA = () => {
           Ready to Study Abroad?
         </h2>
         <p className="mx-auto mb-8 max-w-2xl text-lg">
-          Let's discuss your study abroad goals and create a personalized plan to make your international education dreams a reality.
+          Let&apos;s discuss your study abroad goals and create a personalized plan to make your international education dreams a reality.
         </p>
         <div className="flex flex-col gap-4 justify-center items-center sm:flex-row">
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
@@ -25,7 +25,7 @@ const StudyAbroadCTA = () => {
             </Button>
           </a>
           <a href="#contact">
-            <Button className="inline-flex items-center px-8 py-6 text-lg font-semibold text-white bg-transparent border-2 border-white rounded-full transition-all cursor-pointer hover:bg-white/10 hover:scale-105">
+            <Button className="inline-flex items-center px-8 py-6 text-lg font-semibold text-white bg-transparent rounded-full border-2 border-white transition-all cursor-pointer hover:bg-white/10 hover:scale-105">
               Free Consultation
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

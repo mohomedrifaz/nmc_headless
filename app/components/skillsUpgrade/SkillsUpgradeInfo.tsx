@@ -46,7 +46,7 @@ const SkillsUpgradeInfo = () => (
         transition={{ duration: 0.8 }}
         className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-gray-700"
       >
-        In today's rapidly evolving job market, continuous learning is essential. Our skills upgrade programs are designed to keep you competitive, relevant, and ready for future opportunities.
+        In today`&apos;s rapidly evolving job market, continuous learning is essential. Our skills upgrade programs are designed to keep you competitive, relevant, and ready for future opportunities.
       </motion.p>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
