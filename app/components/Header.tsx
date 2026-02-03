@@ -67,15 +67,15 @@ const Header = () => {
 
     return (
         <header className="fixed top-0 right-0 left-0 z-50 border-b border-gray-200 backdrop-blur-lg bg-white/80">
-            <div className="flex justify-between items-center px-4 py-2 text-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600">
-                <span>Email: info@millenniumconcept.biz</span>
-                <span>WhatsApp: +65 XXXX XXXX</span>
+            <div className="flex flex-col sm:flex-row justify-between items-center px-2 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm text-white bg-gradient-to-r from-purple-600 to-indigo-600">
+                <span className="truncate">Email: info@millenniumconcept.biz</span>
+                <span className="truncate">WhatsApp: +65 XXXX XXXX</span>
             </div>
             <div className="container px-4 mx-auto lg:px-8">
-                <div className="flex justify-between items-center h-20">
+                <div className="flex justify-between items-center h-16 sm:h-20">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
-                        <Image src="/mc-new-logo-1.png" alt="Logo" width={150} height={150} className="object-contain" />
+                        <Image src="/mc-new-logo-1.png" alt="Logo" width={150} height={150} className="object-contain w-24 h-24 sm:w-[150px] sm:h-[150px]" />
                     </Link>
 
                     {/* Desktop Navigation */}

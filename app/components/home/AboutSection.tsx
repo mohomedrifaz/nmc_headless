@@ -29,19 +29,19 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 relative bg-white bg-[url('/double-bubble-outline.png')] bg-repeat">
+    <section id="about" className="py-12 sm:py-16 md:py-20 relative bg-white bg-[url('/double-bubble-outline.png')] bg-repeat">
       <div className="container px-4 mx-auto lg:px-8">
-        <div className="grid gap-16 items-center lg:grid-cols-2">
+        <div className="grid gap-8 sm:gap-12 md:gap-16 items-center lg:grid-cols-2">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <div>
-              <h2 className="mb-6 text-4xl font-extrabold text-gray-900 lg:text-5xl">
+              <h2 className="mb-4 sm:mb-6 text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 lg:text-5xl">
                 About
                 <span className="pl-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">
                   NMC
                 </span>
               </h2>
-              <p className="mb-8 text-lg leading-relaxed text-gray-700">
+              <p className="mb-6 sm:mb-8 text-sm sm:text-base md:text-lg leading-relaxed text-gray-700">
                 We are a leading educational consultancy dedicated to transforming lives through quality education.
                 Our mission is to bridge the gap between dreams and achievements, providing students with the tools,
                 guidance, and opportunities they need to succeed in todays competitive world.
@@ -49,15 +49,15 @@ const AboutSection = () => {
             </div>
 
             {/* Features Grid */}
-            <div className="grid gap-6">
+            <div className="grid gap-4 sm:gap-6">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="flex justify-center items-center h-12 text-white bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl shadow-md w-18">
-                    <feature.icon className="w-6 h-6" />
+                <div key={index} className="flex items-start space-x-3 sm:space-x-4">
+                  <div className="flex justify-center items-center h-10 sm:h-12 text-white bg-gradient-to-br from-purple-500 to-indigo-500 rounded-xl shadow-md w-10 sm:w-12 flex-shrink-0">
+                    <feature.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div>
-                    <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
+                    <h3 className="mb-1 sm:mb-2 text-lg sm:text-xl font-semibold text-gray-900">{feature.title}</h3>
+                    <p className="text-sm sm:text-base text-gray-600">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -65,27 +65,27 @@ const AboutSection = () => {
           </div>
 
           {/* Right Content */}
-          <div className="space-y-8">
-            <Card className="p-8 bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl border border-purple-400 shadow-xl">
-              <h3 className="mb-6 text-4xl font-bold text-gray-900">Why Choose Us?</h3>
-              <div className="space-y-4">
+          <div className="space-y-6 sm:space-y-8">
+            <Card className="p-6 sm:p-7 md:p-8 bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl border border-purple-400 shadow-xl">
+              <h3 className="mb-4 sm:mb-6 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">Why Choose Us?</h3>
+              <div className="space-y-3 sm:space-y-4">
                 {achievements.map((achievement, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-6 h-6 text-indigo-600" />
-                    <span className="font-medium text-gray-800">{achievement}</span>
+                  <div key={index} className="flex items-center space-x-2 sm:space-x-3">
+                    <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-600 flex-shrink-0" />
+                    <span className="text-sm sm:text-base font-medium text-gray-800">{achievement}</span>
                   </div>
                 ))}
               </div>
             </Card>
 
-            <div className="grid grid-cols-2 gap-6">
-              <div className="p-6 text-center bg-gradient-to-br from-purple-100 to-indigo-100 rounded-xl border border-purple-400 shadow-md">
-                <div className="mb-2 text-4xl font-bold text-purple-600">15+</div>
-                <div className="text-sm font-semibold text-gray-700">Years Experience</div>
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
+              <div className="p-4 sm:p-6 text-center bg-gradient-to-br from-purple-100 to-indigo-100 rounded-xl border border-purple-400 shadow-md">
+                <div className="mb-2 text-2xl sm:text-3xl md:text-4xl font-bold text-purple-600">15+</div>
+                <div className="text-xs sm:text-sm font-semibold text-gray-700">Years Experience</div>
               </div>
-              <div className="p-6 text-center bg-gradient-to-br from-purple-100 to-indigo-100 rounded-xl border border-purple-400 shadow-md">
-                <div className="mb-2 text-4xl font-bold text-purple-600">50+</div>
-                <div className="text-sm font-semibold text-gray-700">Countries Served</div>
+              <div className="p-4 sm:p-6 text-center bg-gradient-to-br from-purple-100 to-indigo-100 rounded-xl border border-purple-400 shadow-md">
+                <div className="mb-2 text-2xl sm:text-3xl md:text-4xl font-bold text-purple-600">50+</div>
+                <div className="text-xs sm:text-sm font-semibold text-gray-700">Countries Served</div>
               </div>
             </div>
 
