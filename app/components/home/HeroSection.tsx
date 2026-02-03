@@ -4,6 +4,7 @@ import heroStudents from "@/app/assets/student1.jpg";
 import heroStudents2 from "@/app/assets/studentshero2.jpg";
 import heroStudents3 from "@/app/assets/studentshero3.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
     return (
@@ -43,10 +44,12 @@ const HeroSection = () => {
 
                         {/* CTA */}
                         <div className="flex flex-col gap-4 sm:flex-row">
-                            <Button className="px-8 py-4 h-auto text-lg text-white bg-gradient-to-r from-indigo-500 to-purple-500 transition-all cursor-pointer hover:shadow-lg">
-                                Get Started
-                                <ArrowRight className="ml-2 w-5 h-5" />
-                            </Button>
+                            <Link href="#contact">
+                                <Button className="px-8 py-4 h-auto text-lg text-white bg-gradient-to-r from-indigo-500 to-purple-500 transition-all cursor-pointer hover:shadow-lg">
+                                    Get Started
+                                    <ArrowRight className="ml-2 w-5 h-5" />
+                                </Button>
+                            </Link>
                         </div>
                     </div>
 
@@ -54,12 +57,12 @@ const HeroSection = () => {
                     <div className="relative h-[400px] xl:h-[500px] hidden lg:flex items-center justify-center">
                         <div className="relative w-full h-full">
                             {[
-                                { title: "Study Abroad", className: "top-4 left-24", wide: false, image: heroStudents },
-                                { title: "Skill Training", className: "top-20 right-8", wide: false, image: heroStudents2 },
-                                { title: "Edu Events", className: "bottom-12 left-0", wide: true, image: heroStudents3 },
-                            ].map((item, index) => (
+                                { title: "Study Abroad", className: "top-4 left-24", wide: false, image: heroStudents, href: "/study-abroad" },
+                                { title: "Skills Upgrade", className: "top-20 right-8", wide: false, image: heroStudents2, href: "/skills-upgrade" },
+                                { title: "Edu Events", className: "bottom-12 left-0", wide: true, image: heroStudents3, href: "/education-events" },
+                            ].map((item) => (
+                                <Link key={item.title} href={item.href}>
                                 <div
-                                    key={index}
                                     className={`absolute ${item.className} ${item.wide ? "w-80 h-44" : "w-52 h-60"}
     rounded-2xl overflow-hidden shadow-xl group hover:scale-[1.05] transition-transform duration-300
     border border-white/20 backdrop-blur-sm cursor-pointer`}
@@ -77,6 +80,7 @@ const HeroSection = () => {
                                         </h4>
                                     </div>
                                 </div>
+                                </Link>
 
                             ))}
                         </div>

@@ -1,7 +1,7 @@
 "use client";
 
 const EducationEventsHero = () => (
-  <section className="relative min-h-[90vh] pt-20 flex items-center justify-center overflow-hidden">
+  <section id="home" className="relative min-h-[90vh] pt-20 flex items-center justify-center overflow-hidden">
     {/* Background Video */}
     <video
       autoPlay

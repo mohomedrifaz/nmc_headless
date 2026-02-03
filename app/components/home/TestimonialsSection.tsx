@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const TestimonialsSection = () => {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials = [
     {
@@ -52,11 +52,21 @@ const TestimonialsSection = () => {
   ];
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    setCurrentIndex((prev) => (prev + 1) % (testimonials.length - 2));
   };
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex((prev) => (prev - 1 + (testimonials.length - 2)) % (testimonials.length - 2));
+  };
+
+  // Get three testimonials to display
+  const getVisibleTestimonials = () => {
+    const visible = [];
+    for (let i = 0; i < 3; i++) {
+      const index = (currentIndex + i) % testimonials.length;
+      visible.push(testimonials[index]);
+    }
+    return visible;
   };
 
   return (
@@ -74,83 +84,51 @@ const TestimonialsSection = () => {
 
         {/* Testimonials Carousel */}
         <div className="relative mx-auto max-w-6xl">
-          <div className="grid gap-8 lg:grid-cols-3">
-            {/* Current Testimonial (Large) */}
-            <div className="lg:col-span-2">
+          <div className="grid gap-6 lg:grid-cols-3">
+            {getVisibleTestimonials().map((testimonial, index) => (
               <Card
-                className="group overflow-hidden relative p-8 bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl border border-purple-300 shadow-xl lg:p-12 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] cursor-pointer"
+                key={index}
+                className="group overflow-hidden relative p-6 bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl border border-purple-300 shadow-xl lg:p-8 transition-all duration-300 hover:shadow-2xl hover:scale-[1.02]"
               >
-                <div className="absolute top-6 left-6 opacity-10">
-                  <Quote className="w-16 h-16 text-white" />
+                <div className="absolute top-4 left-4 opacity-10">
+                  <Quote className="w-12 h-12 text-white" />
                 </div>
 
                 <div className="relative z-10">
-                  <div className="flex items-center mb-6">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <div className="flex items-center mb-4">
+                    {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
 
-                  <blockquote className="mb-8 text-xl font-medium leading-relaxed text-gray-900 transition-colors duration-300 lg:text-2xl">
-                    {testimonials[currentTestimonial].content}
+                  <blockquote className="mb-6 text-base font-medium leading-relaxed text-gray-900 transition-colors duration-300 lg:text-lg">
+                    {testimonial.content}
                   </blockquote>
 
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-3">
                     <Image
-                      width={100}
-                      height={100}
-                      src={testimonials[currentTestimonial].image}
-                      alt={testimonials[currentTestimonial].name}
-                      className="object-cover w-16 h-16 rounded-full shadow-md"
+                      width={60}
+                      height={60}
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="object-cover w-12 h-12 rounded-full shadow-md"
                     />
                     <div>
-                      <div className="text-lg font-semibold text-gray-900 transition-colors duration-300">
-                        {testimonials[currentTestimonial].name}
+                      <div className="text-sm font-semibold text-gray-900 transition-colors duration-300">
+                        {testimonial.name}
                       </div>
-                      <div className="font-medium text-purple-600 transition-colors duration-300">
-                        {testimonials[currentTestimonial].role}
-                      </div>
-                      <div className="text-sm text-gray-600 transition-colors duration-300 group-hover:text-black">
-                        {testimonials[currentTestimonial].country}
+                      <div className="text-xs font-medium text-purple-600 transition-colors duration-300">
+                        {testimonial.role}
                       </div>
                     </div>
                   </div>
                 </div>
               </Card>
-
-            </div>
-
-            {/* Side Testimonials Preview */}
-            <div className="space-y-4">
-              {testimonials.slice(1, 3).map((testimonial, index) => (
-                <Card
-                  key={index}
-                  className="p-6 bg-gradient-to-br from-purple-200 to-indigo-100 rounded-xl border border-purple-300 transition-all duration-300 cursor-pointer hover:shadow-lg hover:scale-[1.02]"
-                  onClick={() => setCurrentTestimonial((currentTestimonial + index + 1) % testimonials.length)}
-                >
-                  <div className="flex items-center mb-3 space-x-3">
-                    <Image
-                      width={100}
-                      height={100}
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="object-cover w-10 h-10 rounded-full"
-                    />
-                    <div>
-                      <div className="text-sm font-medium text-gray-900">{testimonial.name}</div>
-                      <div className="text-xs text-purple-700">{testimonial.role}</div>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-700 line-clamp-3">{testimonial.content}</p>
-                </Card>
-
-              ))}
-            </div>
+            ))}
           </div>
 
           {/* Navigation Controls */}
           <div className="flex justify-center items-center mt-12 space-x-4">
-
             <Button
               variant="outline"
               size="icon"
@@ -161,18 +139,18 @@ const TestimonialsSection = () => {
             </Button>
 
             <div className="flex justify-center space-x-2">
-              {testimonials.map((_, index) => (
+              {Array.from({ length: testimonials.length - 2 }).map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 cursor-pointer rounded-full transition-all duration-300 transform ${index === currentTestimonial
-                    ? 'bg-purple-600 scale-125 shadow-md'
-                    : 'bg-purple-300 hover:bg-purple-400'
-                    }`}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-3 h-3 cursor-pointer rounded-full transition-all duration-300 transform ${
+                    index === currentIndex
+                      ? 'bg-purple-600 scale-125 shadow-md'
+                      : 'bg-purple-300 hover:bg-purple-400'
+                  }`}
                 />
               ))}
             </div>
-
 
             <Button
               variant="outline"
@@ -182,7 +160,6 @@ const TestimonialsSection = () => {
             >
               <ChevronRight className="w-4 h-4" />
             </Button>
-
           </div>
         </div>
 

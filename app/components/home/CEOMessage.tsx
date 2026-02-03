@@ -19,32 +19,41 @@ const CeoMessageSection = () => {
 
                 {/* CEO Message Card */}
                 <Card
-                    className="group p-8 mx-auto max-w-4xl bg-white rounded-2xl border border-gray-200 shadow-lg lg:p-12 
+                    className="group p-8 mx-auto max-w-6xl bg-white rounded-2xl border border-gray-200 shadow-lg lg:p-12 
              transition-all duration-300 cursor-pointer 
              hover:bg-gradient-to-r hover:from-purple-500 hover:to-indigo-500 
              hover:text-white hover:shadow-4xl hover:scale-[1.02]"
                 >
-                    <div className="flex flex-col gap-8 items-center lg:flex-row">
-                        <Image
-                            src="/suresh.png"
-                            alt="CEO Portrait"
-                            width={120}
-                            height={120}
-                            className="object-cover rounded-full border-4 border-white shadow-lg"
-                            style={{ aspectRatio: '1 / 1' }}
-                        />
-                        <div className="flex-1">
+                    <div className="grid gap-8 lg:grid-cols-3">
+                        {/* Column 1: Photo */}
+                        <div className="flex justify-center items-center">
+                            <Image
+                                src="/suresh.png"
+                                alt="CEO Portrait"
+                                width={200}
+                                height={200}
+                                className="object-cover rounded-full border-4 border-white shadow-lg"
+                                style={{ aspectRatio: '1 / 1' }}
+                            />
+                        </div>
+                        
+                        {/* Column 2: Message */}
+                        <div className="flex flex-col justify-center">
                             <div className="mb-4">
                                 <Quote className="mb-2 w-8 h-8 text-purple-500 transition-colors duration-300 group-hover:text-white" />
                                 <p className="text-lg font-medium leading-relaxed text-gray-700 transition-colors duration-300 group-hover:text-white">
                                     At NMC, we believe every student deserves a chance to shine. Our mission is to empower dreams through education, innovation, and unwavering support. Your success is our purpose.
                                 </p>
                             </div>
+                        </div>
+                        
+                        {/* Column 3: Name and Title */}
+                        <div className="flex flex-col justify-center">
                             <div>
-                                <h4 className="text-xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-white">
+                                <h4 className="text-2xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-white mb-2">
                                     Mr. Suresh Reeza
                                 </h4>
-                                <p className="text-sm text-purple-600 transition-colors duration-300 group-hover:text-indigo-100">
+                                <p className="text-lg text-purple-600 transition-colors duration-300 group-hover:text-indigo-100">
                                     Founder & CEO, NMC
                                 </p>
                             </div>

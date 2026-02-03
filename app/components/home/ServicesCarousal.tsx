@@ -1,34 +1,38 @@
 "use client";
 import { BookOpen, Users, GraduationCap } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import Link from "next/link";
 
 const ServicesGrid = () => {
   const services = [
     {
       icon: GraduationCap,
-      title: "University Admissions",
+      title: "Study Abroad",
       description: "Get expert guidance for top university admissions worldwide with personalized application strategies.",
       features: ["Application Strategy", "Essay Writing", "Interview Prep"],
       imageUrl: "/student2.jpg",
-    },
-    {
-      icon: BookOpen,
-      title: "Academic Counseling",
-      description: "Personalized academic planning to help you choose the right courses and career paths.",
-      features: ["Career Assessment", "Course Selection", "Academic Planning"],
-      imageUrl: "/student2.jpg",
+      href: "/study-abroad",
     },
     {
       icon: Users,
-      title: "Skill Development",
+      title: "Skills Upgrade",
       description: "Enhance your professional skills with our comprehensive training and development programs.",
       features: ["Professional Training", "Soft Skills", "Technical Skills"],
       imageUrl: "/student2.jpg",
+      href: "/skills-upgrade",
+    },
+    {
+      icon: BookOpen,
+      title: "Edu Events",
+      description: "Join our educational events and webinars to stay informed about the latest opportunities.",
+      features: ["Webinars", "Workshops", "Networking Events"],
+      imageUrl: "/student2.jpg",
+      href: "/education-events",
     },
   ];
 
   return (
-    <section className="px-12 py-20 bg-gradient-to-br from-indigo-400 via-purple-300 to-white">
+    <section id="services" className="px-12 py-20 bg-gradient-to-br from-indigo-400 via-purple-300 to-white">
       <div className="container px-4 mx-auto lg:px-8">
         <div className="mb-8 text-center">
           <h2 className="text-4xl font-bold text-gray-800 drop-shadow-sm lg:text-5xl">
@@ -45,8 +49,8 @@ const ServicesGrid = () => {
         {/* Grid of Cards */}
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
+            <Link key={index} href={service.href}>
             <Card
-              key={index}
               className="group rounded-2xl cursor-pointer h-[500px] py-0 gap-0 overflow-hidden border border-gray-200 shadow-md transition-all duration-300 hover:scale-[1.08]"
             >
               {/* Top Image Section */}
@@ -72,6 +76,7 @@ const ServicesGrid = () => {
                 </ul>
               </div>
             </Card>
+            </Link>
           ))}
         </div>
       </div>

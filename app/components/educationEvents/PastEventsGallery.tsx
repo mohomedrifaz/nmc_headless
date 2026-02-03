@@ -15,7 +15,7 @@ const images = [
 
 const PastEventsGallery = () => {
     return (
-        <section className="text-white bg-gradient-to-br from-purple-600 via-indigo-500 to-purple-300 pt -20">
+        <section id="gallery" className="text-white bg-gradient-to-br from-purple-600 via-indigo-500 to-purple-300 pt -20">
             <div className="container mx-auto">
                 <div className="mb-12 text-center">
                     <h2 className="pt-16 mb-4 text-4xl font-extrabold lg:text-5xl">

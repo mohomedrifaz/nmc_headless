@@ -20,7 +20,7 @@ const EducationEventsDetails = () => {
     ];
 
     return (
-        <section className="py-20 bg-gradient-to-br from-indigo-400 via-purple-300 to-white">
+        <section id="services" className="py-20 bg-gradient-to-br from-indigo-400 via-purple-300 to-white">
             <div className="container px-4 mx-auto lg:px-8">
                 <div className="mb-8 text-center">
                     <h2 className="text-4xl font-bold text-gray-800 drop-shadow-sm lg:text-5xl">

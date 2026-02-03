@@ -20,9 +20,9 @@ const Footer = () => {
     ];
 
     const services = [
-        { name: "Skill Training", href: "#" },
-        { name: "Study Abroad", href: "#" },
-        { name: "Edu Events", href: "#" },
+        { name: "Study Abroad", href: "/study-abroad" },
+        { name: "Skills Upgrade", href: "/skills-upgrade" },
+        { name: "Edu Events", href: "/education-events" },
     ];
 
     const socialLinks = [
@@ -51,11 +51,11 @@ const Footer = () => {
                         <div className="space-y-3 text-sm">
                             <div className="flex items-center space-x-3">
                                 <Phone className="w-5 h-5 text-purple-400" />
-                                <span>+1 (555) 123-4567</span>
+                                <span>+65 XXXX XXXX</span>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Mail className="w-5 h-5 text-purple-400" />
-                                <span>info@NMC.com</span>
+                                <span>info@millenniumconcept.biz</span>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <MapPin className="w-5 h-5 text-purple-400" />
