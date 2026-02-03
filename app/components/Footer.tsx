@@ -8,7 +8,6 @@ import {
     Mail,
     MapPin,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const Footer = () => {
@@ -42,7 +41,7 @@ const Footer = () => {
                     <div className="space-y-6">
                         <div className="flex items-center space-x-2">
                             <div className="">
-                                <Image src="/mc-new-logo-1.png" alt="NMC" width={100} height={100} />    
+                                <Image src="/mc-new-logo-1.png" alt="NMC" width={100} height={100} />
                             </div>
                         </div>
                         <p className="leading-relaxed text-gray-400">
@@ -100,25 +99,7 @@ const Footer = () => {
 
                     {/* Newsletter & Social */}
                     <div>
-                        <h3 className="mb-6 text-lg font-semibold text-purple-400">Stay Connected</h3>
-                        <p className="mb-4 text-sm text-gray-400">
-                            Subscribe to our newsletter for the latest updates and educational insights.
-                        </p>
                         <div className="space-y-4">
-                            <form className="flex w-full">
-                                <input
-                                    type="email"
-                                    placeholder="Enter your email"
-                                    className="flex-1 px-4 py-2 min-w-0 placeholder-gray-400 text-white bg-gray-800 rounded-l-lg border border-gray-700 focus:outline-none focus:border-purple-500"
-                                />
-                                <Button
-                                    type="submit"
-                                    className="flex-shrink-0 px-6 h-auto text-white bg-gradient-to-r from-purple-500 to-indigo-500 rounded-r-lg rounded-l-none transition-all duration-300 hover:shadow-lg"
-                                >
-                                    Subscribe
-                                </Button>
-                            </form>
-
                             <div className="flex space-x-4">
                                 {socialLinks.map((social) => (
                                     <a
@@ -137,18 +118,7 @@ const Footer = () => {
 
                 {/* Bottom Bar */}
                 <div className="flex flex-col justify-between items-center py-8 text-sm text-gray-400 border-t border-gray-700 md:flex-row">
-                    <div>© 2024 EduGateway. All rights reserved.</div>
-                    <div className="flex space-x-6">
-                        <a href="#" className="transition-colors duration-300 hover:text-white">
-                            Privacy Policy
-                        </a>
-                        <a href="#" className="transition-colors duration-300 hover:text-white">
-                            Terms of Service
-                        </a>
-                        <a href="#" className="transition-colors duration-300 hover:text-white">
-                            Cookie Policy
-                        </a>
-                    </div>
+                    <div>© 2024 Millennium Concept. All rights reserved.</div>  
                 </div>
             </div>
         </footer>
