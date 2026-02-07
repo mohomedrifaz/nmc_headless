@@ -75,7 +75,7 @@ const Header = () => {
                 <div className="flex justify-between items-center h-16 sm:h-20">
                     {/* Logo */}
                     <Link href="/" className="flex items-center space-x-2">
-                        <Image src="/mc-new-logo-1.png" alt="Logo" width={150} height={150} className="object-contain w-24 h-24 sm:w-[150px] sm:h-[150px]" />
+                        <Image src="/mc-new-logo-1.png" alt="Logo" width={300} height={300} className="object-contain w-full" />
                     </Link>
 
                     {/* Desktop Navigation */}
@@ -87,7 +87,7 @@ const Header = () => {
                                     key={item.name}
                                     href={href}
                                     onClick={(e) => handleNavClick(item.href, item.anchor, e)}
-                                    className="font-medium text-gray-600 transition-colors duration-300 hover:text-indigo-600"
+                                    className="font-medium text-xl text-gray-600 transition-colors duration-300 hover:text-indigo-600"
                                 >
                                     {item.name}
                                 </Link>

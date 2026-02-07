@@ -44,7 +44,7 @@ const HeroSection = () => {
 
                         {/* CTA */}
                         <div className="flex flex-col gap-3 justify-center sm:gap-4 sm:flex-row lg:justify-start">
-                            <Link href="#contact">
+                            <Link href="#services">
                                 <Button className="px-6 py-3 w-full h-auto text-base text-white bg-gradient-to-r from-indigo-500 to-purple-500 transition-all cursor-pointer sm:w-auto sm:px-8 sm:py-4 sm:text-lg hover:shadow-lg">
                                     Get Started
                                     <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
@@ -64,7 +64,7 @@ const HeroSection = () => {
                                 <Link key={item.title} href={item.href}>
                                 <div
                                     className={`absolute ${item.className} ${item.wide ? "w-80 h-44" : "w-52 h-60"}
-    rounded-2xl overflow-hidden shadow-xl group hover:scale-[1.05] transition-transform duration-300
+    rounded-2xl overflow-hidden shadow-xl group hover:scale-[1.5] hover:z-[100] transition-transform duration-200
     border border-white/20 backdrop-blur-sm cursor-pointer`}
                                 >
 

@@ -41,9 +41,6 @@ const ServicesGrid = () => {
               Services
             </span>
           </h2>
-          <p className="py-3 sm:py-4 mx-auto max-w-3xl text-sm sm:text-base md:text-lg font-semibold text-gray-700 px-4">
-            Our vision, values, and commitment to student success—directly from the heart of our leadership.
-          </p>
         </div>
 
         {/* Grid of Cards */}

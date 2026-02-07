@@ -75,11 +75,8 @@ const TestimonialsSection = () => {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-4xl font-bold text-gray-900 lg:text-5xl">
-            What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500">Students Say</span>
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500">Success Stories</span>
           </h2>
-          <p className="mx-auto max-w-3xl text-lg text-gray-600">
-            Real stories from students who achieved their dreams with our guidance and support
-          </p>
         </div>
 
         {/* Testimonials Carousel */}

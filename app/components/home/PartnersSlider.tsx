@@ -58,19 +58,15 @@ const PartnersSlider = () => {
     return (
         <section id="gallery" className="py-24 text-white bg-[url('/double-bubble-outline.png')] bg-repeat">
             <div className="container px-4 mx-auto text-center">
-                <h2 className="mb-8 text-4xl font-bold text-gray-800 drop-shadow-sm lg:text-5xl">
+                <h2 className="mb-16 text-4xl font-bold text-gray-800 drop-shadow-sm lg:text-5xl">
                     Our{" "}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-indigo-700">
                         Partners
                     </span>
-                    <p className="py-4 mx-auto max-w-3xl text-lg font-semibold text-gray-700">
-                        Our vision, values, and commitment to student success—directly from the heart of our leadership.
-                    </p>
                 </h2>
 
                 {/* Sri Lankan Partners Row */}
                 <div className="mb-8">
-                    <h3 className="mb-4 text-2xl font-semibold text-gray-700">Sri Lankan Partners</h3>
                     <Splide options={sliderOptions('ltr')} aria-label="Sri Lankan Partners" className="mb-6">
                         {sriLankanPartners.map((logo, index) => (
                             <SplideSlide key={`sri-lankan-${index}`}>
@@ -88,7 +84,6 @@ const PartnersSlider = () => {
 
                 {/* Other Partners Row 1 */}
                 <div className="mb-8">
-                    <h3 className="mb-4 text-2xl font-semibold text-gray-700">International Partners</h3>
                     <Splide options={sliderOptions('rtl')} aria-label="International Partners Row 1" className="mb-6">
                         {otherPartners.slice(0, Math.ceil(otherPartners.length / 2)).map((logo, index) => (
                             <SplideSlide key={`other-1-${index}`}>

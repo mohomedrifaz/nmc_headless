@@ -38,9 +38,6 @@ const UpcomingEventsSection = () => {
                     <h2 className="mb-4 text-4xl font-extrabold lg:text-5xl">
                         Upcoming <span className="text-yellow-300">Events & Webinars</span>
                     </h2>
-                    <p className="mx-auto max-w-2xl text-lg text-indigo-100">
-                        Stay informed and inspired with our latest sessions designed to guide your educational journey.
-                    </p>
                 </div>
 
                 <div className="grid gap-8 md:grid-cols-3">
@@ -49,14 +46,14 @@ const UpcomingEventsSection = () => {
                             key={index}
                             className="bg-white text-gray-900 rounded-3xl p-8 shadow-2xl transition-all duration-300 hover:scale-[1.03] hover:shadow-purple-500/30"
                         >
-                            <div className="flex items-center mb-6 space-x-4">
+                            <div className="flex items-start mb-6 space-x-4">
                                 {event.type === "Online" || event.type === "TBA" ? (
                                     <Video className="w-7 h-7 text-purple-600" />
                                 ) : (
                                     <CalendarDays className="w-7 h-7 text-purple-600" />
                                 )}
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900">{event.title}</h3>
+                                    <h3 className="text-2xl pb-2 font-extrabold text-gray-900">{event.title}</h3>
                                     {event.subtitle && (
                                         <p className="text-sm text-purple-600 font-medium">{event.subtitle}</p>
                                     )}

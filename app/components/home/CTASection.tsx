@@ -12,10 +12,10 @@ const CTASection = () => {
     <section id="contact" className="py-20 text-white bg-gradient-to-r from-purple-500 to-indigo-500">
       <div className="container px-4 mx-auto text-center lg:px-8">
         <h2 className="mb-6 text-4xl font-bold lg:text-5xl">
-          Ready to Begin Your Journey?
+          Let&apos;s Make the Next Step!
         </h2>
         <p className="mx-auto mb-8 max-w-2xl text-lg">
-          Take the first step toward your academic and career success with EduGateway. Our expert team is here to guide you every step of the way.
+          Take the first step toward your academic and career success with New Millennium Concepts. Our expert team is here to guide you every step of the way.
         </p>
         <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
           <Button

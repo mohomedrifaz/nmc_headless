@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 const StudyAbroadHero = () => (
   <section id="home" className="relative min-h-[90vh] pt-20 flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-800">
     {/* Background Pattern */}
@@ -17,9 +19,9 @@ const StudyAbroadHero = () => (
       <p className="mx-auto mb-8 max-w-3xl text-2xl font-medium leading-relaxed text-white/90">
         Unlock world-class education opportunities across top universities worldwide. We guide you through every step of your international study journey.
       </p>
-      <div className="inline-block px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full shadow-lg transition cursor-pointer hover:scale-105 hover:shadow-xl">
+      <Link href="#gallery" className="inline-block px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full shadow-lg transition cursor-pointer hover:scale-105 hover:shadow-xl">
         Start Your Journey
-      </div>
+      </Link>
     </div>
   </section>
 );

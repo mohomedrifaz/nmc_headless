@@ -34,14 +34,11 @@ const StudyAbroadServices = () => {
             <div className="container px-4 mx-auto lg:px-8">
                 <div className="mb-8 text-center">
                     <h2 className="text-4xl font-bold text-gray-800 drop-shadow-sm lg:text-5xl">
-                        Our Study Abroad{" "}
+                       Latest and {" "}
                         <span className="text-yellow-300">
-                            Services
+                            Scholarships
                         </span>
                     </h2>
-                    <p className="py-4 mx-auto max-w-3xl text-lg font-semibold text-gray-700">
-                        Comprehensive support for your entire study abroad journey, from initial planning to arrival at your destination.
-                    </p>
                 </div>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                     {services.map((service, index) => (

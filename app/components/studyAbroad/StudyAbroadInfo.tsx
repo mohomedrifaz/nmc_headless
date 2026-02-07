@@ -36,7 +36,7 @@ const StudyAbroadInfo = () => (
         className="mb-6 text-5xl font-extrabold leading-tight text-gray-900"
       >
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">
-          Why Choose Our Study Abroad Services?
+          Learn Why We Are an Ultimate Choice!
         </span>
       </motion.h2>
 
@@ -46,7 +46,7 @@ const StudyAbroadInfo = () => (
         transition={{ duration: 0.8 }}
         className="mx-auto mb-12 max-w-3xl text-xl leading-relaxed text-gray-700"
       >
-        We&apos;ve helped thousands of students achieve their dreams of studying abroad. Our comprehensive services cover everything from university selection to visa processing, ensuring a smooth transition to your new academic home.
+        We&apos;ve helped thousands of students achieve their dreams of studying abroad. Our comprehensive services cover everything from university selection to visa processing, ensuring a smooth transition to your new academic status.
       </motion.p>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
