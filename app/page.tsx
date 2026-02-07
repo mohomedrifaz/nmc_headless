@@ -9,6 +9,7 @@ import PartnersSlider from "./components/home/PartnersSlider";
 import UpcomingEventsSection from "./components/home/UpcomingEvents";
 import ContactForm from "./components/home/ContactForm";
 
+// Test
 export default function Home() {
   return (
     <div className="min-h-screen font-sans bg-background">
