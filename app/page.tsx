@@ -7,6 +7,7 @@ import CTASection from "./components/home/CTASection";
 import SecondaryHero from "./components/home/SecondaryHero";
 import PartnersSlider from "./components/home/PartnersSlider";
 import UpcomingEventsSection from "./components/home/UpcomingEvents";
+import ContactForm from "./components/home/ContactForm";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <CeoMessageSection />
       <UpcomingEventsSection />
       <TestimonialsSection />
+      <ContactForm />
       <CTASection />
     </div>
   );
